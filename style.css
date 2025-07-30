@@ -1,0 +1,264 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html,
+body { 
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Geist", sans-serif;
+}
+
+body {
+  background: linear-gradient(to left, #f9f9fa, #f4f4f5);
+  padding-top: 2.5rem;
+}
+
+#hero-head {
+  font-size: 48px;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-bottom: 0.6rem;
+}
+
+.hero-main p {
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #71717a;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+  gap: 10px;
+  background-color: #ffff;
+  margin: 5rem auto;
+  border-radius: 16px;
+  width: 448px;
+  height: fit-content;
+  border: 1px solid #e4e4e7;
+}
+
+.container h1 {
+  font-size: 20px;
+}
+
+.container p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: #71717a;
+}
+
+.container button {
+  padding: 14px;
+  color: #ffff;
+  border-radius: 12px;
+  background: linear-gradient(to right, #1d283a, #26344b);
+  font-size: 16px;
+  font-weight: 100;
+  margin-top: 1rem;
+  border: none;
+}
+
+.plus-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.plus-btn button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 500;
+  background: linear-gradient(to right, #1d283a, #26344b);
+  color: white;
+  border: none;
+  margin-bottom: 2rem;
+  position: fixed;
+  z-index: 1000;
+}
+
+#popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(3px);
+  display: none;
+  z-index: 10;
+}
+
+.popup-content {
+  background-color: #e2e4e5;
+  height: 30rem;
+  width: 30rem;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.Prioriti {
+  display: flex;
+  padding: 5px;
+  gap: 25px;
+  margin-top: 10px;
+}
+.inner-div {
+  display: flex;
+  flex-direction: row;
+  background-color: #e4fbed;
+  border-radius: 10px;
+  gap: 7px;
+  height: 20px;
+  padding: 5px 16px;
+  font-size: 18px;
+  border-radius: 9999px;
+}
+
+.inner-div img {
+  width: 20px;
+  height: 20px;
+}
+
+.cancel,
+.save-task {
+  width: 194px;
+  height: 50px;
+  border-radius: 12px;
+  margin-top: 20px;
+  padding: 12px 17px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#TaskTitle {
+  width: 420px;
+  height: 30px;
+  margin: 10px 0;
+  border-radius: 12px;
+  padding: 13px 17px;
+  border: 1px solid #d6d6db;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#dashboard-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container-innerDiv,
+.container-innerDiv1 {
+  background-color: #121e2b;
+  color: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.subdiv1 {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.subdiv2 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.task-card {
+  position: relative;
+  left: 285px;
+  right: 0;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.task-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.task-status {
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+}
+
+.task-priority {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 11px;
+  border-radius: 12px;
+  color: white;
+  width: fit-content;
+}
+
+.task-priority {
+  background-color: #00b894;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s;
+}

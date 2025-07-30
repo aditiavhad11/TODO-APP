@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo Home page</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"/>
+        <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+        rel="stylesheet"/>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"/>
+  </head>
+ 
+  <body>
+    <section class="Hero">
+      <div class="hero-main">
+        <h1 id="hero-head">TaskForge</h1>
+        <p>Professional task management for peak productivity</p>
+        <div id="outer-container">
+          <div class="container">
+            <img src="IMAGES\componant 5.png" alt="background" />
+            <h1>No Task Yet</h1>
+            <p class="subtext">
+              Create your first task to get started on your productivity journey
+            </p>
+            <button onclick="openPopup()">Add Your First Task</button>
+          </div>
+        </div>
+        <div class="plus-btn" onclick="openPopup()"><button>+</button></div>
+      </div>
+    </section>
+
+    <!-- POPUP FORM WINDOW  -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <form name="taskForm" id="taskF">
+          <h3>Add New Task</h3>
+          <label for="TaskTitle">Task Title:</label><br />
+          <input
+            type="text"
+            id="TaskTitle"
+            name="task"
+            placeholder="Enter Task Title.."/><br /><br />
+          <label>Priority Level:</label><br />
+          <div class="Prioriti">
+            <input name="priority" type="radio" value="Low" />
+            <div class="inner-div" style="border: 1px solid #a5f3c2">
+              <img src="IMAGES\Component 1.png" alt="Low" />
+              <h6 style="margin-top: 2px">Low</h6>
+            </div>
+          </div>
+          <div class="Prioriti">
+            <input name="priority" type="radio" value="Medium" />
+            <div
+              class="inner-div"
+              style="
+                background-color: #fdf0d8;
+                color: #7a4f05;
+                border: 1px solid #facf85;">
+              <img src="IMAGES\Component2.png" alt="Medium" />
+              <h6 style="margin-top: 2px">Medium</h6>
+            </div>
+          </div>
+          <div class="Prioriti">
+            <input name="priority" type="radio" value="High" />
+            <div
+              class="inner-div"
+              style="
+                background-color: #fdeded;
+                color: #7a0505;
+                border: 1px solid #e99696;">
+              <img src="IMAGES\Component3.png" alt="High" />
+              <h6 style="margin-top: 2px">High</h6>
+            </div>
+          </div>
+          <br />
+        </form>
+        <div class="btns">
+          <button
+            onclick="addTask()"
+            class="save-task"
+            style="
+              background: linear-gradient(to right, #1d283a, #26344b);
+              color: white;">
+            Save Task
+          </button>
+          <button
+            onclick="closePopup()"
+            class="cancel"
+            style="border: 1px solid #e4e4e7">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="plus-btn" onclick="openPopup()"><button>+</button></div>
+
+    <!-- DASHBOARD SECTION  -->
+    <section>
+      <div id="dashboard-container" style="display: none">
+        <div class="container-innerDiv">
+          <div class="subdiv">
+            <h6>Total Tasks</h6>
+            <h1></h1>
+          </div>
+          <div class="subdiv"><i class="ri-list-check-3"></i></div>
+        </div>
+        <div class="container-innerDiv">
+          <div class="subdiv">
+            <h6>Completed Tasks</h6>
+            <h1></h1>
+          </div>
+          <div class="subdiv"><i class="ri-task-line"></i></div>
+        </div>
+        <div class="container-innerDiv">
+          <div class="subdiv" id="successRate">
+            <h6>Success Rate</h6>
+            <h1></h1>
+          </div>
+          <div class="subdiv"><i class="ri-stairs-line"></i></div>
+        </div>
+        <div class="container-innerDiv1">
+          <div class="subdiv1">
+            <h5>Pending Tasks</h5>
+            <i class="fa-solid fa-chart-column"></i>
+          </div>
+          <div class="subdiv2 high">
+            <h6>High</h6>
+            <p></p>
+          </div>
+          <div class="subdiv2 medium">
+            <h6>Medium</h6>
+            <p></p>
+          </div>
+          <div class="subdiv2 low">
+            <h6>Low</h6>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="taskList"></div>
+      <div id="task-template" class="task-card" style="display: none">
+        <div>
+          <strong class="task-title">Title</strong>
+          | Priority:<span class="task-priority"></span> 
+          | Status:<span class="task-status"></span>
+        </div>
+        <div>
+          <input type="checkbox" />
+          <button class="delete-btn">🗑️</button>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
